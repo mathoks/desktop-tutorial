@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <meta charset="UTF-8">
+    <meta name=c:\Users\USER\OneDrive\Documents\GitHub\appolo"viewport" content="width=device-width, initial-scale=1.0">
+    <title>DocPlanner</title>
+</head>
+<body>
+    <style>
+        * {
+            margin: 5px;
+            
+        }
+        header {
+            width: 80%;
+            margin: 10px auto;
+        }
+        nav{
+            display: flex;
+            flex-basis: auto;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            
+        }
+        .links a{
+            text-decoration: none;
+            padding: 10px;
+            line-height: 50px;
+        }
+        .logo1 {
+            
+            color: #12eac6;
+        }
+        .logo a {
+            font-size: 30px;
+            text-decoration: none;
+            
+        }
+        .links a:active {
+            color: #12eac6;
+        }
+
+        .links a:hover {
+            color: #12eac6;
+        }
+        .logo a > span {
+            padding: 5px;
+        }
+        .logo a span > img {
+            position: absolute;
+            top: 22px;
+            margin-left: -13px;
+            height: 35px;
+            width: 35px;
+            
+        } 
+        #about {
+            color: #12eac6;
+        }
+        
+        .section1 {
+            display: flex;
+            flex-direction: column ;
+            align-items: center;
+            padding-top: 30px;
+            
+            
+            
+        }
+        .section1 div > h1 {
+            
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-weight: 300;
+            color: #00ffbf;
+            font-size: 33px;
+            
+            
+        }
+       
+        .content {
+        
+            display: flex;
+            width: 60%;
+            
+            }
+
+        .content div {
+            padding: 30px 8px;
+            line-height: 1.5em;
+            color: #ababab;
+        }
+
+        .section2 {
+            
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+            flex-wrap: wrap;
+            font-family: Arial, Helvetica, sans-serif;
+            width: 87%;
+            padding-left: 100px;
+
+            
+           /* padding-right: 10%;    */
+        }
+
+        .section2 h1 {
+            font-weight: 400;
+            
+        }
+        .section2 p {
+            word-spacing: 5px;
+            /* width: 80%; */
+            font-size: large;
+        }
+        .card1 {
+            box-sizing: border-box;
+            background-color:#00ffbf;
+            border-radius: 10px;
+            padding: 40px;
+            width: fit-content;
+            height: 300px;
+            
+        }
+        .card1_row {
+            display: block;
+            align-items: center;
+        }
+
+        .card2 {
+            box-sizing: border-box;
+            background-color: #0080ff;
+            border-radius: 10px;
+            margin: 20px;
+            padding: 40px;
+            width: fit-content;
+            height: 300px;
+            
+        }
+        .card3 {
+            box-sizing: border-box;
+            background-color: #1a0000;
+            border-radius: 10px;
+            padding: 40px;
+            width: fit-content;
+            height: 300px;
+            
+            
+            
+        }
+
+        .country {
+            background-color: inherit;
+            padding-top: 50px;
+        }
+        
+        .select_coutry {
+            border: none;
+            background-color: inherit;
+            border-bottom: 2px solid white;
+            color: #fff;
+        }
+
+        .select_coutry option {
+            background-color: inherit;
+        }
+        .select_row {
+            display: block;
+            
+        }
+        .select_row div {
+            padding-top: 8px;
+            padding-bottom: 8px;
+        }
+
+        .section3 {
+            display: flex;
+            flex-basis: 50%;
+            flex-direction: row;
+            margin-left: 220px;
+            justify-content: space-between;
+            margin-right: 125px;
+            margin-top: -45px;
+            
+        }
+        .section3 div > p {
+            width: 70%;
+            padding-left: 40px;
+            padding-top: 25px;
+            line-height: 30px;
+            font-size: 20px;
+            font-weight: 100 !important;
+            color: #4fd634;
+        }
+        .image_col img {
+            width: 70px;
+            height: 15px;
+            padding: 15px;
+        
+        }
+        .image_col {
+            display: flex;
+            flex-wrap: wrap;
+            
+            
+        }
+        .images {
+            margin-left: 150px;
+            width: 50%;
+            
+        }
+
+        
+        .big {
+             width : 60px !important;
+            height: 60px !important;
+        }
+        .section4 {
+            display: flex;
+            align-items: center;
+            background-color: #a7dcc7;
+            height: 550px;
+            padding-top: 50px;
+            margin-left: 0px;
+            margin-right: 0px !important;
+           
+        
+        }
+        .section4 div > p{
+            font-size: small;
+            color: gray;
+        }
+        .section_row {
+            display: flex;
+            align-items: center;
+            margin-top: 20px;
+        }
+        .section_row div > div {
+            background-color: #fff;
+            width: fit-content;
+            height: fit-content;
+            border-radius: 2px;
+            box-sizing: border-box;
+            padding: 30px;
+            text-align: center;
+
+        }
+        .section4_1 {
+            padding: 60px;
+        }
+        .section4_1 h1 {
+            font-weight: 300;
+            color: #158d37;
+        }
+        .section_row h2 {
+            color: #158d37;
+            font-weight: 200;
+        }
+        .logo_crop {
+            position: relative;
+            margin-top: 10px;
+            padding-top: 40px;
+        }
+        .heading1 {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 20px;
+
+            
+        }
+
+        .section5 {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 80px;
+           
+        }
+        .content2 {
+            width: 45%;
+            color: gray;
+            text-align: center;
+        }
+        .content1 {
+            width: 40%;
+            font-weight: 200;
+            color: #12eac6;
+            font-size: 30px;
+            font-family: Work Sans, Arial, sans-serif;
+            text-align: center;
+            letter-spacing: -0.5px;
+        }
+
+        .section6 {
+            display: flex;
+            flex-direction: row;
+            align-content: center;
+            flex-wrap: wrap;
+            justify-content: center;
+            width: 80%;
+            margin-left: 150px;
+            padding-top: 80px;
+        }
+
+        .section6 div > img {
+            width: 98%;
+            height: 80%;
+            
+        }
+
+        .section6  div {
+            margin-left:  -5px;
+            width: 30%;
+            
+        }
+
+        .section6 div:hover{
+            box-shadow: 2px 1px #f0f7f4 ;
+            border: 5px 10px 10px 12px;
+            border-radius: 4px;
+        }
+
+        .card6 {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        button {
+            background-color: #0080ff;
+            color: #fff;
+            border: none;
+            padding: 7px;
+            font-weight: 500;
+            font-size: 12px;
+            border-radius: 3px;
+        }
+        .section7 {
+            padding: 50px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .section7 div > h1{
+            font-weight: 100;
+            color: grey;
+        }
+
+        footer {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-size: 14px;
+            color: #ababab;
+            word-spacing: 0.001px;
+            
+        }
+
+        footer div p > a {
+            text-decoration: none;
+            color: #0080ff;
+            
+        }
+        .last {
+            margin-top: -20px;
+        }
+
+    </style>
+    <header>
+        <nav>
+            
+            <div class="logo">
+                <a href="#">
+                    <span><img src="./lib/logo 1.png" ></span>
+                    <span class="logo1">Docplanner</span>
+                    <span class="logo2">Group</span>
+                </a>
+            </div>
+            <div class="links">
+                <a href="#" id="about">About us</a>
+                <a href="#">Career</a>
+                <a href="#">Departments</a>
+            </div>
+        </nav>
+    </header>
+    <section class="section1">
+        <div>
+            <img src="./lib/logo 1.png" width="35px" height="35px">
+        </div>
+        <div>
+            <h1> Making the healthcare experience more human</h1>
+        </div>
+        <div class="content">
+           <div>
+            <p>We want patients to find the perfect doctor and book an appointment in the most easy way. The patient journey should be enjoyable, and that's why we are always next to them: to help them find the best possible care. Anytime, anywhere. </p>
+           </div>
+           <div>
+            <p>We also help doctors to better manage their practice and build their online reputation. With our integrated end-to-end solution, doctors are able not only to improve their online presence, but also to devote their time to what really matters: their patients. </p>
+           </div>
+        </div>
+    </section>
+    <section class="section2">
+        <div class="card1">
+            <div class="card1_row">
+                <div>
+                    <i class="fa-solid fa-users"></i>
+                </div>
+                <div>
+                    <h1> For Patients</h1>
+                    <p>Find a doctor, book a <br>visit and solve any <br> health-related doubt</p>
+                </div>
+                
+            </div>
+            <div class="country">
+                <select name="country" class="select_coutry">
+                    <option value="">Choose Country </option>
+                    <option value="Cameron">Cameron</option>
+                    <option value="lybia">Libya</option>
+                    <option value="Ghana">Ghana</option>
+                    <option value="Nigeria">Togo</option>
+                    <option value="Zambia">Zambia</option>
+                    <option value="Mali">Mali</option>
+
+                </select>
+            </div>
+        </div>
+        <div class="card2">
+            <div class= "card1_row">
+                <div>
+                <i class="fa-solid fa-user-doctor"></i>
+                </div>
+                <div>
+                <h1>For Doctor</h1>
+                <p>Save time managing <br>visits and cut no- <br>shows by half</p>
+                </div>
+            </div>
+            <div class="country">
+                <select name="country" class="select_coutry">
+                    <option value="">Choose Country </option>
+                    <option value="Cameron">Cameron</option>
+                    <option value="lybia">Libya</option>
+                    <option value="Ghana">Ghana</option>
+                    <option value="Nigeria">Togo</option>
+                    <option value="Zambia">Zambia</option>
+                    <option value="Mali">Mali</option>
+
+                </select>
+            </div>
+        </div>
+        <div class="card3">
+            <div class="card1_row">
+                <div>
+                    <i class="fa-thin fa-house-chimney-medical"></i>
+                </div>
+                <div>
+                    <h1>For Clinics</h1>
+                    <p>Deliver an exceptional <br>patient experience in <br> your clinic</p>
+                </div>
+                
+            </div>
+            <div class="select_row">
+            <div class="country">
+                <select name="country" class="select_coutry">
+                    <option value="">Choose Country </option>
+                    <option value="Cameron">Cameron</option>
+                    <option value="lybia">Libya</option>
+                    <option value="Ghana">Ghana</option>
+                    <option value="Nigeria">Togo</option>
+                    <option value="Zambia">Zambia</option>
+                    <option value="Mali">Mali</option>
+
+                </select>
+            </div>
+            <div class="country">
+                <select name="country" class="select_coutry">
+                    <option value="">Choose Country </option>
+                    <option value="Cameron">Cameron</option>
+                    <option value="lybia">Libya</option>
+                    <option value="Ghana">Ghana</option>
+                    <option value="Nigeria">Togo</option>
+                    <option value="Zambia">Zambia</option>
+                    <option value="Mali">Mali</option>
+
+                </select>
+            </div>
+            </div>
+            </div>
+        </div>
+    </section>
+    <section class="section3">
+        <div>
+            <p> We are a global
+                company <br>
+                with local culture</p>
+        </div>
+        <div class="images">
+        <div class="image_col">
+            <img src = "./lib/znanylekarz.png"/>
+            <img src="./lib/Doctoralia.png"/>
+            <img src="./lib/MioDottore.png"/>
+            <img src="./lib/doktortakvimi.png" alt="image3"/>
+            <img src="./lib/logo-jameda.svg"/>
+            <img src="./lib/znanylekarz.png"/>
+            <img src="./lib/logo-tuotempo.svg"/>
+            <img src="./lib/logo-gipo-primary.svg" class="big"/>
+            <img src="./lib/logo-clinicloud.svg"  class="big"/>
+            <img src="./lib/logo-feegow.svg " />
+        </div>
+        </div>
+    </section>
+    <section class="section4"> 
+        
+        <div class="section4_1">
+            <div class="heading1">
+                <h1>
+                    The world's biggest <br>healthcare platform
+                </h1>
+                <p>
+                    We work from 9 offices all over the world, bringing <br> Docplanner <br>Group to life in 13 countries.
+                </p>
+                </div>
+                <div class="logo_crop">
+                    <img src="./lib/logocropped.png"  />
+                </div>
+            
+        </div>
+        <div class="section_row">
+        <div>
+            <div >
+                <h2> Leader in 13 <br>countries</h2>
+                <p> Poland, Brazil, Mexico, Spain, Italy, Germany, Turkey, Colombia, Czech Republic, Portugal, Argentina, Peru and Chile</p>
+            </div>
+            <div>
+                <h2>90,000,000 patients</h2>
+                <p>visit our websites each month</p>
+            </div>
+        </div>
+        <div>  
+            <div>
+              <h2>15,000,000 appointments</h2>
+              <p>booked last month</p>
+            </div>
+            <div>
+                <h2>210,000 active doctors</h2>
+                <p>trust our solutions</p>
+            </div>
+        </div>
+        </div>
+        
+    </section>
+    <section class="section5">
+        <div class="content1">
+            <p>
+                Improve the lives of millions.<br>Change yours forever.
+            </p>
+        </div>
+        <div class="content2">
+            <p>
+            More than 2800 team mates share our same vision, goals and passion.
+With offices in Warsaw, Barcelona, Munich, Istanbul, Rome, Rio, Bologna,
+Mexico City and Curitiba, our search for great talent never stops.
+</p>
+        </div>
+    </section>
+    <section class="section6">
+        <div>
+            
+            <img src="./lib/barcelona.png" />
+            <span class="card6">
+                <p> Bologona</p>
+                <button>SEE OPENING</button>
+            </span>
+        </div>
+        <div>
+            <img src="./lib/bologna.png" />
+            <span class="card6">
+                <p> Bologona</p>
+                <button>SEE OPENING</button>
+            </span>
+        </div>
+        <div>
+            <img src="./lib/curitiba.png"/>
+            <span class="card6">
+                <p> Bologona</p>
+                <button>SEE OPENING</button>
+            </span>
+        </div>
+        <div>
+            <img src="./lib/warsaw.png" />
+            <span class="card6">
+                <p> Bologona</p>
+                <button>SEE OPENING</button>
+            </span>
+        </div>
+        <div>
+            <img src="./lib/rome.png" />
+            <span class="card6">
+                <p> Bologona</p>
+                <button>SEE OPENING</button>
+            </span>
+        </div>
+        <div>
+            <img src="./lib/istanbul.png" />
+            <span class="card6">
+                <p> Bologona</p>
+                <button>SEE OPENING</button>
+            </span>
+        </div>
+        <div>
+            <img src="./lib/mexico-city.png" />
+            <span class="card6">
+                <p> Bologona</p>
+                <button>SEE OPENING</button>
+            </span>
+        </div>
+        <div>
+            <img src="./lib/munich.png"/>
+            <span class="card6">
+                <p> Bologona</p>
+                <button>SEE OPENING</button>
+            </span>
+        </div>
+        <div>
+            <img src="./lib/rome.png"/>
+            <span class="card6">
+                <p> Bologona</p>
+                <button>SEE OPENING</button>
+            </span>
+        </div>
+    </section>
+    <section class="section7">
+        <div>
+        <h1>Sounds interesting? Join us now!</h1>
+        </div>
+        <div>
+            <button> SEE ALL CURRENT OPENINGS </button>
+        </div>
+    </section>
+    <footer>
+        <div>
+            <p>We are leaders in 13 countries: <a href="#">Poland</a> ,<a href="#">Turky</a> , <a href="#">Spain</a> , <a href="#">Italy</a>,<a href="#">Germany</a> , <a href="#">Cheze Republic</a> , <a href="#">Portugal</a> , <a href="#">Mexico</a> , <a href="#">Columbia</a> , <a href="#">Brazil</a> , <a href="#">Argentina</a>,<a href="#">Peru and Chile</a> </p>
+        </div>
+        <div>
+            <p> This site uses cookies to deliver services in accordance with this Privacy Policy. You can specify the conditions for storing or accessing cookies on your browser.</p>
+        </div>
+        <div class="last">
+            <p>www.docplanner.com © 2023</p>
+        </div>
+    </footer>
+</body>
+</html>
